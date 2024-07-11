@@ -1,0 +1,66 @@
+/* Stile per la navbar con gradient */
+.navbar {
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
+
+/* Stile per il brand della navbar */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Stile per i link della navbar */
+.navbar-nav .nav-link {
+  margin-right: 15px;
+  font-size: 1.1rem;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* Effetto hover sui link */
+.navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+/* Cambia il colore dei bottoni */
+.navbar .btn-outline-light {
+  color: #fff;
+  border-color: #fff;
+}
+
+.navbar .btn-outline-light:hover {
+  background-color: #fff;
+  color: #4b6cb7;
+  border-color: #fff;
+}
+
+/* Stile per il toggler della navbar */
+
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.round-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border: 3px solid #4b6cb7; /* Bordo bluet */
+  font-weight: 600; /* Bold leggero */
+  color: #182848;
+}
+
+/* Media query per schermi più piccoli */
+@media (max-width: 576px) {
+  .navbar-nav .nav-link {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+

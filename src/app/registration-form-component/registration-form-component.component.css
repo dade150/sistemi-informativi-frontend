@@ -1,0 +1,34 @@
+/* course-registration.component.css */
+
+/* Custom styles for the registration form */
+#registrationForm {
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+}
+
+#registrationForm label {
+  font-weight: bold;
+}
+
+#registrationForm .form-control {
+  height: 42px;
+}
+
+#registrationForm .btn-primary,
+#registrationForm .btn-secondary {
+  width: 100%;
+  height: 42px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+@media (max-width: 576px) {
+  #registrationForm {
+    padding: 20px;
+  }
+}

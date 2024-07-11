@@ -1,0 +1,32 @@
+<form id="registrationForm" class="container mt-5">
+  <div class="mb-3">
+    <label for="firstName" class="form-label">{{firstName}}</label>
+    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required
+           [(ngModel)]="userRegisterRequest.name" name="name"  (input)="checkFormValidity()">
+  </div>
+  <div class="mb-3">
+    <label for="lastName" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required
+           [(ngModel)]="userRegisterRequest.lastname" name="lastname" (input)="checkFormValidity()">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email" required
+           [(ngModel)]="userRegisterRequest.email" name="email" (input)="checkFormValidity()">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Enter your password" required
+           [(ngModel)]="userRegisterRequest.password" name="password" (input)="checkFormValidity()">
+  </div>
+  <div class="mb-3">
+    <label for="confirmPassword" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required
+           [(ngModel)]="userRegisterRequest.confirmPassword" name="confirmPassword" (input)="checkFormValidity()">
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="this.isButtonDisabled" (click)="register()">Register</button>
+  <div class="mt-3 text-center">
+    <p>Already have an account? <a href="/login"  class="link-primary">Login here</a></p>
+  </div>
+</form>

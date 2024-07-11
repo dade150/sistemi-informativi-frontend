@@ -1,0 +1,108 @@
+.footer {
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  color: #fff;
+  padding-top: 20px;
+}
+
+.footer .btn-outline-light {
+  color: #fff;
+  border-color: #fff;
+}
+
+.footer .btn-outline-light:hover {
+  background-color: #fff;
+  color: #4b6cb7;
+  border-color: #fff;
+}
+
+.footer h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.footer p {
+  color: #ccc;
+}
+
+.footer a {
+  color: #ccc;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .footer .col-md-4 {
+    margin-bottom: 20px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+}
+
+.icon {
+  width: 4rem;
+  height: 4rem;
+  background: #182848;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+
+}
+
+.icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  color: #f1f1f1;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 130%;
+  left: -110%;
+  top: 80%;
+  transform: rotate(45deg);
+  transition: background-color 0.3s ease;
+}
+
+.instagram::before {
+  background: rgba(131, 58, 180, 0.6); /* Semi-trasparente viola */
+}
+
+.facebook::before {
+  background: rgba(59, 89, 152, 0.6); /* Semi-trasparente blu */
+}
+
+.youtube::before {
+  background: rgba(255, 0, 0, 0.6); /* Semi-trasparente rosso */
+}
+
+.icon:hover::before {
+  animation: slide 0.7s forwards;
+}
+
+@keyframes slide {
+  50% {
+    left: 10%;
+    top: -40%;
+  }
+  100% {
+    left: -15%;
+    top: -15%;
+  }
+}

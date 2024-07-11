@@ -1,0 +1,42 @@
+.text-section-left{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f0f0f0; /* Colore del testo (giallo oro) */
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Sfondo semitrasparente per migliorare la leggibilità */
+  border-radius: 10px;
+  max-width: 80%; /* Assicura che il testo non superi i bordi della slide */
+  width: auto; /* Adatta la larghezza del contenitore al contenuto */
+}
+
+.text-section-left {
+  left: 10%;
+  text-align: left;
+}
+
+h1 {
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+
+.btn-primary {
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white; /* Colore del testo del bottone */
+}
+
+.btn-primary:hover {
+  background-color: #31b0d5;
+  border-color: #31b0d5;
+}

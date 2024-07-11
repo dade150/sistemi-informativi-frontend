@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); margin-bottom: 0;">
+  <div class="container-fluid">
+    <!-- Link come brand della barra di navigazione -->
+    <a class="navbar-brand text-light" href="#">Uni-SI</a>
+    <!-- Bottone per toggler la navbar su dispositivi mobili -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-menu-up" viewBox="0 0 16 16">
+        <path d="M7.646 15.854a.5.5 0 0 0 .708 0L10.207 14H14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.793zM1 9V6h14v3zm14 1v2a1 1 0 0 1-1 1h-3.793a1 1 0 0 0-.707.293l-1.5 1.5-1.5-1.5A1 1 0 0 0 5.793 13H2a1 1 0 0 1-1-1v-2zm0-5H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zM2 11.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 0-1h-8a.5.5 0 0 0-.5.5m0-4a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11a.5.5 0 0 0-.5.5m0-4a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1h-6a.5.5 0 0 0-.5.5"/>
+      </svg> <!--cercare un bottone piu carino-->
+    </button>
+    <!-- Contenuto della navbar -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Degrees</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Students</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Faculty</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">News</a>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <p *ngIf="loginResponse.name!=null; then bloccoIf else bloccoElse"></p>
+        <ng-template #bloccoIf>
+          <div class="btn-group">
+            <div class="btn-group dropstart">
+              <button type="button" class="btn btn-light round-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                {{loginResponse.name.toUpperCase().substring(0,1)}}{{loginResponse.lastname.toUpperCase().substring(0,1)}}
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">My Intranet</a></li>
+                <li><a class="dropdown-item" href="#">Update Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template #bloccoElse>
+          <button type="button" class="btn btn-outline-light me-2" routerLink="/login" (click)="handleLoginClick()">Login</button>
+          <button type="button" class="btn btn-outline-light" routerLink="/register" (click)="handleRegisterClick()">Register</button>
+        </ng-template>
+
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,17 @@
+.custom-img {
+  max-width: 70%; /* Riduce le dimensioni delle immagini */
+  max-height: 10rem; /* Limita l'altezza massima */
+  margin: auto; /* Centra le immagini orizzontalmente */
+}
+
+.img-fluid {
+  transition: transform 0.3s ease-in-out;
+}
+
+.img-fluid:hover {
+  transform: scale(1.05);
+}
+
+.rounded {
+  border-radius: 10px;
+}

@@ -1,0 +1,31 @@
+<form id="registrationForm" (ngSubmit)="registerCourse(form)" #form=ngForm class="container mt-5">
+  <div class="mb-3">
+    <label for="name" class="form-label">Course Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter course name" required
+           ngModel name="name" minlength="4">
+  </div>
+  <div class="mb-3">
+    <label for="duration" class="form-label">Duration (in months)</label>
+    <input type="number" class="form-control" id="duration" placeholder="Enter course duration" required
+            ngModel name="duration" min="1" max="100">
+  </div>
+  <div class="mb-3">
+    <label for="smallDescription" class="form-label">Small Description</label>
+    <input type="text" class="form-control" id="smallDescription" placeholder="Enter small description" required
+            ngModel name="smallDescription" minlength="4" maxlength="60">
+  </div>
+  <div class="mb-3">
+    <label for="completeDescription" class="form-label">Complete Description</label>
+    <textarea class="form-control" id="completeDescription" rows="3" placeholder="Enter complete description" required
+              ngModel name="completeDescription" minlength="4"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="category" class="form-label">Category</label>
+    <select ngModel name="category" class="form-control" id="category" required>
+      <option value="" selected>Select a category</option>
+      <option  *ngFor="let category of categories" [value]="category.categoryName">{{category.categoryName}}</option>
+    </select>
+  </div>
+  <button class="btn btn-primary"  [disabled]="!form.valid" >Register</button>
+  <button class="btn btn-secondary" >Reset</button>
+</form>
